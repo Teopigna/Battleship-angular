@@ -1,0 +1,13 @@
+
+<button class="btn btn-sq" style="opacity: 85%; align-items: center;" (click)="onShoot()" [disabled]="hit || end" >
+
+    <span *ngIf="!hit" style="font-weight: 700; text-align: center;">{{coordinate}}</span>
+    
+    <ng-container *ngIf="hit">
+        <fa-icon *ngIf="!occupied"   [icon]="faIcon" [styles]="{'stroke': 'red', 'color': 'red'}"></fa-icon>
+        <fa-icon *ngIf="occupied"   [icon]="faIconHit" [styles]="{'stroke': 'green', 'color': 'green'}"></fa-icon>
+    </ng-container> 
+
+    
+</button>
+

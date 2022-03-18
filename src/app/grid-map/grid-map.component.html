@@ -1,0 +1,72 @@
+
+<!-- GRIGLIA - MAPPA -->
+
+
+
+<table class="table table-borderless rounded" style="background-image: url(./assets/images/ocean.jpg); background-size: 110%;" >  
+    <tr *ngFor="let y of charList">
+        <th scope="row" style="text-align: center; background-color: black;">{{y}}</th>
+        <td *ngFor="let x of numList">
+            <app-casella
+                [coordinate]="y+x"
+                [occupied]="checkOccupied(y+x)"
+                (shot)="checkShot($event)">
+            </app-casella>
+        </td>   
+    </tr>
+</table>
+
+<table class="table">
+    <tr>
+        <th scope="col" style="text-align: center;">1</th>
+        <th scope="col" style="text-align: center;">2</th>
+        <th scope="col" style="text-align: center;">3</th>
+        <th scope="col" style="text-align: center;">4</th>
+        <th scope="col" style="text-align: center;">5</th>
+        <th scope="col" style="text-align: center;">6</th>
+        <th scope="col" style="text-align: center;">7</th>
+        <th scope="col" style="text-align: center;">8</th>
+        <th scope="col" style="text-align: center;">9</th>
+        <th scope="col" style="text-align: center;">10</th>
+    </tr>
+</table>
+<hr>
+
+<!-- PULSANTIERA -->
+<div class="row" style="margin-bottom: 100px;">
+    <div class="col-2"></div>
+    <div class="col-1">
+        <select class="form-control" style="width: fit-content;" #coord1>
+            <option >A</option>
+            <option >B</option>
+            <option >C</option>
+            <option >D</option>
+            <option >E</option>
+            <option >F</option>
+            <option >G</option>
+            <option >H</option>
+            <option >I</option>
+            <option >J</option>  
+        </select>
+    </div>
+    <div class="col-1">
+        <select class="form-control" style="width: fit-content;" #coord2>
+            <option >1</option>
+            <option >2</option>
+            <option >3</option>
+            <option >4</option>
+            <option >5</option>
+            <option >6</option>
+            <option >7</option>
+            <option >8</option>
+            <option >9</option>
+            <option >10</option> 
+        </select>
+    </div>
+    <div class="col-2">
+        <button class="btn btn-primary" (click)="checkShotInput(coord1.value+coord2.value)" [disabled]="end">FIRE!</button>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+

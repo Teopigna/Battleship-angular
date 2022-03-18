@@ -1,0 +1,36 @@
+
+<div class="container-fluid" style="background-color: slategray;">
+
+  
+  <!-- Qui vanno il nome dell'app ed eventuali info aggiuntive-->
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+      <h1 style="text-align: center;">Battaglia Navale</h1>
+      
+    </div>
+    <div class="col-2"></div> 
+  </div>
+
+  <hr>
+    
+  <div class="row">
+    <!-- Qui vanno le info sulle navi -->
+    <div class="col-2">
+      <app-boats></app-boats>
+    </div>
+    <!-- Qui va la griglia -->
+    <div class="col-8">
+      <h1 *ngIf="win" style="text-align: center; color: green;">YOU WON</h1>
+      <h1 *ngIf="lose" style="text-align: center; color: red;">YOU LOST</h1>
+      <app-grid-map></app-grid-map>
+      
+    </div>
+    <!-- Qui vanno le opzioni e la pulsantiera -->
+    <div class="col-2">
+      <app-options></app-options>
+    </div>
+  </div>
+  
+
+</div>
