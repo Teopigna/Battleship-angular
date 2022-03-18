@@ -5,7 +5,7 @@
 
 <table class="table table-borderless rounded" style="background-image: url(./assets/images/ocean.jpg); background-size: 110%;" >  
     <tr *ngFor="let y of charList">
-        <th scope="row" style="text-align: center; background-color: black;">{{y}}</th>
+        <th scope="row" style="text-align: center; background-color: rgb(255, 0, 0);">{{y}}</th>
         <td *ngFor="let x of numList">
             <app-casella
                 [coordinate]="y+x"
