@@ -17,7 +17,6 @@ export class BoatsManagerService {
     constructor(public gameManagerService: GameManagerService) {
 
         this.placeBoats();
-        this.printDisposition();
 
         this.gameManagerService.resetGame.subscribe(
             () => {
@@ -26,7 +25,6 @@ export class BoatsManagerService {
                 this.occupiedCells = [];
                 // Rigenera casualmente le navi
                 this.placeBoats();
-                this.printDisposition();
             }
         );
     }
@@ -140,13 +138,4 @@ export class BoatsManagerService {
         }
         return true;
     }
-
-    // Stampa il posizionamento delle navi
-    private printDisposition(){
-        for(let b of this.boatsList){
-            console.log("Nave di lunghezza "+ b.coordinates.length);
-            console.log("Piazzata alle coordinate: "+b.coordinates);
-        }
-    }
-    
 }
