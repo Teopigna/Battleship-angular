@@ -18,9 +18,9 @@ export class BoatsComponent implements OnInit {
   constructor(public boatsManagerService: BoatsManagerService, public gameManagerService: GameManagerService) { }
 
   ngOnInit(): void {
-    
+    // Inizializza l'array di navi
     this.boatsList = this.boatsManagerService.getBoats();
-    
+    // Sottoscrizione all'evento resetGame del GameManagerService
     this.gameManagerService.resetGame.subscribe(
       () => {
         this.boatsList = this.boatsManagerService.getBoats();

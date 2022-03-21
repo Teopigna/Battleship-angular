@@ -76,13 +76,15 @@
             </select>
             <button 
                 class="btn btn-warning" 
-                style="width: fit-content; margin-left: 10px;" 
+                style="width: fit-content; margin-left: 10px; font-family:Impact;" 
                 (click)="checkShotInput(coord1.value+coord2.value)" 
                 [disabled]="end">
                 FIRE!
+                <fa-icon class="fa-lg" [icon]="faIcon"></fa-icon>
             </button>
             
         </div>
+        <!-- FINE PULSANTIERA -->
         <hr style="height: 2px;">
         <div class="row">
             <app-options></app-options>

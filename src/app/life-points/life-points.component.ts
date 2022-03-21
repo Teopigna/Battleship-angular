@@ -11,6 +11,7 @@ export class LifePointsComponent implements OnInit {
 
   lifeCounter: number = 10;
   totalLife: number = 10;
+
   faIcon = faHeart;
   faIcon2 = faHeartBroken;
 

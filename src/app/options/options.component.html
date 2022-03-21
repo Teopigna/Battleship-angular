@@ -1,18 +1,19 @@
 
-
-<button class="btn" (click)="resetGame()" style="align-self: center; border-bottom: 60px; background-color:rgb(52, 116, 255);">
-    Reset Game
+<!-- RESET GAME BUTTON -->
+<button class="btn" (click)="resetGame()" style="align-self: center; border-bottom: 60px; background-color:rgb(52, 116, 255);font-family:Impact;">
+    Restart
+    <fa-icon class="fa-lg" [icon]="faIcon"></fa-icon>
 </button>
-
+<!-- SHOW/HIDE BUTTON -->
 <button 
     class="btn " 
     (click)="showBoats()"
     style="align-self: center; margin-left: 10px;background-color: rgb(52, 116, 255);">
     <ng-container *ngIf="!show">
-        Show Boats
+        <fa-icon class="fa-lg" [icon]="faIconShow"></fa-icon>
     </ng-container>
     <ng-container *ngIf="show">
-        Hide Boats
+        <fa-icon class="fa-lg" [icon]="faIconHide"></fa-icon>
     </ng-container>
 </button>
 

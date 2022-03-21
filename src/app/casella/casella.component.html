@@ -1,4 +1,5 @@
 
+<!-- SINGOLA CASELLA -->
 <button 
     class="btn btn-sq" 
     style="align-items: center; margin-left: 10px;"
@@ -6,12 +7,10 @@
     (click)="onShoot()" [disabled]="hit || end" >
 
     <span *ngIf="!hit" style="font-weight: 700; text-align: center; opacity: 50%;">{{coordinate}}</span>
-    
+    <!-- ICONA MOSTRATA DOPO CHE LA CASELLA VIENE COLPITA -->
     <ng-container *ngIf="hit">
         <fa-icon class="fa-lg" *ngIf="!occupied"   [icon]="faIcon" [styles]="{'stroke': 'red', 'color': 'red'}"></fa-icon>
         <fa-icon class="fa-lg" *ngIf="occupied"   [icon]="faIconHit" [styles]="{'stroke': 'green', 'color': 'green'}"></fa-icon>
     </ng-container> 
-
-    
 </button>
 

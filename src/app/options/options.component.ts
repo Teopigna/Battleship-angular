@@ -1,5 +1,6 @@
 import { GameManagerService } from './../services/game-manager.service';
 import { Component, OnInit } from '@angular/core';
+import { faEye, faEyeSlash, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-options',
@@ -9,6 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class OptionsComponent implements OnInit {
 
   show: boolean = false;
+
+  faIconShow = faEye;
+  faIconHide = faEyeSlash;
+  faIcon = faSpinner;
 
   constructor(public gameManagerService: GameManagerService) { }
   

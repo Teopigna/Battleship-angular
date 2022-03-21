@@ -2,8 +2,9 @@
 
 <!-- style="background-image: url(./assets/images/battalia.jpeg); background-size:1700px; background-repeat: no-repeat; background-position-y: center;" -->
 
+<!-- HEADER -->
 <div class="container-fluid" style="width: 100%;" >
-  <!-- HEADER -->
+
   <div class="row" >
     <div class="col-5 d-flex flex-row-reverse">
       <fa-icon
@@ -12,11 +13,9 @@
         style="color: rgb(52, 116, 255);">
       </fa-icon>
     </div>
-
     <div class="col-2 d-flex justify-content-center" >
-      <h2 style="text-align: center;">Battaglia Navale</h2>
+      <h2 style="text-align: center; font-family:Impact;">Battleship</h2>
     </div>
-    
     <div class="col-5 d-flex ">
       <fa-icon
         class="fa-solid fa-2x"
@@ -27,26 +26,21 @@
   </div>
   
 </div>
+<!-- FINE HEADER -->
   
 
 <div class="container-fluid" style="background-color: rgb(199, 199, 199);">
-
   <div class="row">
     <hr>
-    <div class="col-2">  
-    </div>
-    <!-- Qui va la mappa/griglia -->
-    <div class="col-8">
-      <h1 *ngIf="win" style="text-align: center; color: green;">YOU WON</h1>
-      <h1 *ngIf="lose" style="text-align: center; color: red;">YOU LOST</h1>
-    </div>
-    <div class="col-2">
-    </div>
+    <!-- WIN/LOSE TEXT -->
+    <h1 *ngIf="win" style="text-align: center; color: green; font-family: Impact;">YOU WON</h1>
+    <h1 *ngIf="lose" style="text-align: center; color: red; font-family: Impact;">YOU LOST</h1>
   </div>
-
+  <!-- MAPPA DI GIOCO -->
   <app-grid-map></app-grid-map>
 
 </div>
+
 
   
   

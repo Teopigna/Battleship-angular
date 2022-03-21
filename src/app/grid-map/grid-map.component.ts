@@ -3,6 +3,7 @@ import { BoatsManagerService } from './../services/boats-manager.service';
 import { GameManagerService } from './../services/game-manager.service';
 import { Boat } from './../shared/boat.model';
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { faBomb } from '@fortawesome/free-solid-svg-icons';
 
 const chars: string[] = ['J', 'I', 'H', 'G', 'F', 'E', 'D', 'C', 'B', 'A'];
 const nums: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
@@ -20,6 +21,8 @@ export class GridMapComponent implements OnInit {
   boatsList: Boat[] = []
   // Indica se la partita sia finita o meno
   end: boolean = false;
+
+  faIcon = faBomb;
 
   @ViewChildren(CasellaComponent) customComponents?: QueryList<CasellaComponent>;  
   

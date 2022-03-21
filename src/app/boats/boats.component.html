@@ -1,7 +1,11 @@
 
-    <h3 style="text-align: center;">Boats</h3>
+    <h3 style="text-align: center; font-family:Impact;">Boats</h3>
+    <hr style="width: 150px; margin-left: 120px; height: 4px;">
     <div class="row" >
+        <!-- FOR OGNI NAVE -->
         <span class="col-6" *ngFor="let boat of boatsList" style="margin-left: 120px;">
+            
+            <!-- FOR OGNI CASELLA OCCUPATA DALLA NAVE -->
             <fa-icon
                 class="fa-solid fa-lg"
                 *ngFor="let coords of boat.coordinates"
@@ -9,7 +13,7 @@
                 style="margin-left: 2px;"
                 [style]="{'color': (boat.destroyed) ? 'green' : 'red'}">
             </fa-icon>
-            <p></p>
+            <hr style="height: 2px; width: 100px;">
         </span>
     </div>
 
