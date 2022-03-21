@@ -4,12 +4,12 @@
 <div class="row">
     
     <!-- INFO NAVI -->
-    <div class="col-3" >
+    <div class="col-3 d-flex" >
         <app-boats></app-boats>
     </div>
     <!-- MAPPA -->
-    <div class="col-6">
-        <table class="table table-borderless rounded" style="table-layout:fixed" >  
+    <div class="col-6 ">
+        <table class="table table-borderless rounded " style="table-layout:fixed; align-content: center;" >  
             <tr *ngFor="let y of charList">
                 <th scope="row" style="text-align: left;">{{y}}</th>
                 <td *ngFor="let x of numList" >
@@ -90,6 +90,7 @@
             <app-options></app-options>
         </div>
     </div>
+    
 </div>
 
 <hr>
