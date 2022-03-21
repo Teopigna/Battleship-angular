@@ -2,7 +2,7 @@ import { GameManagerService } from './../services/game-manager.service';
 import { BoatsManagerService } from './../services/boats-manager.service';
 import { Boat } from './../shared/boat.model';
 import { Component, OnInit, Input } from '@angular/core';
-import { faSquareFull } from '@fortawesome/free-solid-svg-icons';
+import { faShip } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-boats',
@@ -11,7 +11,7 @@ import { faSquareFull } from '@fortawesome/free-solid-svg-icons';
 })
 export class BoatsComponent implements OnInit {
 
-  faIcon = faSquareFull;
+  faIcon = faShip;
   
   boatsList: Boat[] = []
 

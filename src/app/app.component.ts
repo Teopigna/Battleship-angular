@@ -1,5 +1,6 @@
 import { GameManagerService } from './services/game-manager.service';
 import { Component, OnInit } from '@angular/core';
+import { faAnchor } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+
+  faIcon = faAnchor;
+
   constructor(public gameManagerService: GameManagerService) {}
 
   win: boolean = false;

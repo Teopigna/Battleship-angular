@@ -18,6 +18,9 @@ export class CasellaComponent implements OnInit {
   //Variabili che servono a disabilitare il bottone presente sul component
   hit: boolean = false;
   end: boolean = false;
+
+  //Variabile che serve a mostrare la disposizione
+  show: boolean = false;
   
   //Evento emesso nel momento del click
   @Output() shot = new EventEmitter<string>();
@@ -30,20 +33,28 @@ export class CasellaComponent implements OnInit {
       () => {
         this.hit = false;
         this.end = false;
+        this.show = false;
       }
-    )
+    );
     //Subscribe all'evento vittoria
     this.gameManagerService.won.subscribe(
       () => {
         this.end = true;
       }
-    )
+    );
     //Subscribe all'evento sconfitta
     this.gameManagerService.lost.subscribe(
       () => {
         this.end = true;
       }
-    )
+    );
+    this.gameManagerService.show.subscribe(
+      () => {
+        if(this.occupied){
+          this.show = !this.show;
+        }
+      }
+    );
   }
   // Fun lanciata al click della casella
   public onShoot() {

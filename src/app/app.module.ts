@@ -9,6 +9,7 @@ import { CasellaComponent } from './casella/casella.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BoatsComponent } from './boats/boats.component';
 import { OptionsComponent } from './options/options.component';
+import { LifePointsComponent } from './life-points/life-points.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { OptionsComponent } from './options/options.component';
     GridMapComponent,
     CasellaComponent,
     BoatsComponent,
-    OptionsComponent
+    OptionsComponent,
+    LifePointsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,15 @@
-<div class="container rounded" style="background-color: rgba(59, 183, 255, 0.349);">
-    <h2>Boats info</h2>
-    <ng-container *ngFor="let boat of boatsList">
-        <fa-icon
-            *ngFor="let coords of boat.coordinates"
-            [icon]="faIcon"
-            style="margin-left: 2px;"
-            [style]="{'color': (boat.destroyed) ? 'green' : 'red'}">
-        </fa-icon>
-        <p></p>
-    </ng-container>
-</div>
+
+    <h3 style="text-align: center;">Boats</h3>
+    <div class="row" >
+        <span class="col-6" *ngFor="let boat of boatsList" style="margin-left: 120px;">
+            <fa-icon
+                class="fa-solid fa-lg"
+                *ngFor="let coords of boat.coordinates"
+                [icon]="faIcon"
+                style="margin-left: 2px;"
+                [style]="{'color': (boat.destroyed) ? 'green' : 'red'}">
+            </fa-icon>
+            <p></p>
+        </span>
+    </div>
+

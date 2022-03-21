@@ -11,7 +11,9 @@ export class GameManagerService {
     //Eventi emessi rispettivamente per la vittoria e la sconfitta
     won = new EventEmitter();
     lost = new EventEmitter();
-
+    //Evento emesso quando si mostrano/nascondono le navi
+    show = new EventEmitter();
+    
     loseLife(){
         this.lifeCount -= 1;
         this.lifeChange.emit();
@@ -29,5 +31,6 @@ export class GameManagerService {
 
     reset(){
         this.lifeCount = 10;
+        this.lifeChange.emit();
     }
 }

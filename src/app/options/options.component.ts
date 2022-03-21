@@ -8,25 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OptionsComponent implements OnInit {
 
-  lifeCounter?: number;
+  show: boolean = false;
 
   constructor(public gameManagerService: GameManagerService) { }
-
+  
   ngOnInit(): void {
-    this.lifeCounter = this.gameManagerService.lifeCount;
-    this.gameManagerService.lifeChange.subscribe(
-      () => {
-        this.lifeCounter = this.gameManagerService.lifeCount;
-      }
-    );
+    
   }
 
   resetGame(){
     this.gameManagerService.resetGame.emit();
     this.gameManagerService.reset();
-    this.lifeCounter = this.gameManagerService.lifeCount;
+    this.show = false;
   }
 
+  showBoats(){
+    this.gameManagerService.show.emit();
+    this.show = !this.show
+  }
 
 
 }
